@@ -13,3 +13,4 @@ def generate_timetable():
 
 if __name__ == '__main__':
     app.run(debug=True)
+

@@ -1,5 +1,5 @@
 import random
-from models.timetable import Timetable
+from src.models.timetable import Timetable
 
 def generate_timetable(classes, teachers, time_slots):
     """

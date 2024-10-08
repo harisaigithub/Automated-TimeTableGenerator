@@ -26,4 +26,3 @@ class Timetable:
 
     def serialize(self):
         return self.entries
-    

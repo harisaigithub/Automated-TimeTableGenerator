@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <title>Automated TimeTable Generator</title>
+    <link rel="stylesheet" href="/web/static/style.css">
+    <title>Timetable Generator</title>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the Automated Timetable Generator</h1>
-        <a href="/login"><button>Login</button></a>
+        <h1>Welcome to the Timetable Generator</h1>
+        <form id="generate-form">
+            <button type="button" onclick="generateTimetable()">Generate Timetable</button>
+        </form>
+        <div id="message"></div>
     </div>
+    <script src="/web/static/script.js"></script>
 </body>
 </html>

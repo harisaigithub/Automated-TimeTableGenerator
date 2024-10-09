@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify, render_template
 from src.services.timetable_service import TimetableService
+import os
 
-app = Flask(__name__)
+template_dir = os.path.abspath('web/templates')
+app = Flask(__name__, template_folder=template_dir)
 
 @app.route('/')
 def index():
@@ -12,11 +14,8 @@ def generate_timetable():
     data = request.get_json()
     school = data.get('school', {})
     constraints = data.get('constraints', {})
-    
+
     timetable_service = TimetableService()
     timetable = timetable_service.create_timetable(school, constraints)
-    
-    return jsonify(timetable.serialize())
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    return jsonify(timetable.serialize())

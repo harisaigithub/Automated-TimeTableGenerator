@@ -1,1 +1,1 @@
-web: gunicorn src.controllers.timetable_controller:app
+web: gunicorn app:app

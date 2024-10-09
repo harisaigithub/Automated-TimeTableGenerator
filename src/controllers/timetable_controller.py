@@ -17,3 +17,6 @@ def generate_timetable():
     timetable = timetable_service.create_timetable(school, constraints)
     
     return jsonify(timetable.serialize())
+
+if __name__ == '__main__':
+    app.run(debug=True)
